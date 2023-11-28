@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <main>
+        <section  class="display">
+        <!-- Um campo de entrada de texto onde o resultado e as entradas são exibidos. -->
+        <!-- O atributo readonly impede que o usuário edite manualmente -->
+            <input type="text" id="displayContent" readonly>
+        </section>
+
+        <!-- Criando os botões da calculadora -->
+        <section class="button">
+            <div>
+                <button onclick="calc.clearDisplay()" class="carac">C</button>
+                <button onclick="calc.appendToDisplay(`/`)" class="carac">/</button>
+                <button onclick="calc.appendToDisplay(`*`)" class="carac">*</button>
+            </div>
+
+            <div>
+                <button onclick="calc.appendToDisplay(`-`)" class="carac">-</button>
+                <button onclick="calc.appendToDisplay(`+`)" class="carac">+</button>
+                <button onclick="calc.appendToDisplay(`.`)" class="carac">.</button>
+            </div>
+            
+            <div>
+                <button onclick="calc.appendToDisplay(`7`)" class="num">7</button>
+                <button onclick="calc.appendToDisplay(`8`)" class="num">8</button>
+                <button onclick="calc.appendToDisplay(`9`)" class="num">9</button>
+            </div>
+
+            <div>
+                <button onclick="calc.appendToDisplay(`4`)" class="num">4</button>
+                <button onclick="calc.appendToDisplay(`5`)" class="num">5</button>
+                <button onclick="calc.appendToDisplay(`6`)" class="num">6</button>
+            </div>
+
+            <div>
+                <button onclick="calc.appendToDisplay(`1`)" class="num">1</button>
+                <button onclick="calc.appendToDisplay(`2`)" class="num">2</button>
+                <button onclick="calc.appendToDisplay(`3`)" class="num">3</button>
+            </div>
+
+            <div>
+                <button onclick="calc.appendToDisplay(`0`)" class="cen">0</button>
+                <button onclick="calc.calculate()" class="cen">=</button>
+            </div>  
+        </section>
+    </main>
+    <!-- Aqui é a chamada para o arquivo -->
+    <script src="script.js"></script>
+</body>
+</html>
